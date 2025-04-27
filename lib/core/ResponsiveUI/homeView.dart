@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:profile/adaptiveUI.dart';
-import 'package:profile/feature/home/View/widget/desktoblayout.dart';
-import 'package:profile/feature/home/View/widget/moblielayout.dart';
+import 'package:profile/core/ResponsiveUI/desktoblayout.dart';
+import 'package:profile/core/ResponsiveUI/moblielayout.dart';
 
 class Homeview extends StatelessWidget {
   const Homeview({super.key});

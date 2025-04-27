@@ -1,10 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:profile/adaptiveUI.dart';
-import 'package:profile/feature/home/View/homeView.dart';
+import 'package:profile/core/ResponsiveUI/homeView.dart';
 
 void main() {
   runApp(const Profile());
 }
+
 
 class Profile extends StatelessWidget {
   const Profile({super.key});
