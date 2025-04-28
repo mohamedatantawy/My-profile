@@ -42,7 +42,7 @@ class Certificateview extends StatelessWidget {
           ),
           SizedBox(height: 20),
           SizedBox(
-            height: 300,
+            height: 600,
             child: GridView.builder(
               itemCount: items.length,
               gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
@@ -51,7 +51,9 @@ class Certificateview extends StatelessWidget {
                         ? 4
                         : MediaQuery.sizeOf(context).width > 900
                         ? 3
-                        : 2,
+                        : MediaQuery.sizeOf(context).width > 600
+                        ? 2
+                        : 1,
                 childAspectRatio: 1.4,
                 mainAxisSpacing: 10,
                 crossAxisSpacing: 10,

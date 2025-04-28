@@ -173,8 +173,9 @@ class _ProjectviewState extends State<Projectview>
                           MediaQuery.sizeOf(context).width > 1300
                               ? 4
                               : MediaQuery.sizeOf(context).width > 900
-                              ? 3
-                              : 2,
+                              ? 3: MediaQuery.sizeOf(context).width > 600
+                              ?2
+                              : 1,
                       childAspectRatio: 1.4,
                       mainAxisSpacing: 10,
                       crossAxisSpacing: 10,

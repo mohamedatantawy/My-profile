@@ -9,7 +9,7 @@ class Homeview extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Adaptiveui(
-      mobile: (context) => Moblielayout(),
+    mobile: (context) => Moblielayout(),
 
       desktob: (context) => Desktoblayout(),
     );

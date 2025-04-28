@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:profile/core/ResponsiveUI/desktobbody.dart';
 import 'package:profile/core/ResponsiveUI/desktoblayout.dart';
+import 'package:profile/core/ResponsiveUI/homeView.dart';
 import 'package:profile/core/utils/colors.dart';
 import 'package:profile/core/utils/styles.dart';
 import 'package:profile/feature/darwer/view/darwerView.dart';
@@ -61,7 +62,7 @@ class _SkillsviewState extends State<Skillsview> {
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
                   builder: (context) {
-                    return Desktoblayout();
+                    return Homeview();
                   },
                 ),
               );
@@ -90,7 +91,7 @@ class _SkillsviewState extends State<Skillsview> {
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
                   builder: (context) {
-                    return Desktoblayout();
+                    return Homeview();
                   },
                 ),
               );
@@ -118,7 +119,7 @@ class _SkillsviewState extends State<Skillsview> {
               Navigator.of(context).pushReplacement(
                 MaterialPageRoute(
                   builder: (context) {
-                    return Desktoblayout();
+                    return Homeview();
                   },
                 ),
               );
@@ -198,9 +199,11 @@ class _SkillsviewState extends State<Skillsview> {
                   crossAxisCount:
                       MediaQuery.sizeOf(context).width > 1300
                           ? 4
-                          : MediaQuery.sizeOf(context).width > 900
-                          ? 3
-                          : 2,
+                        : MediaQuery.sizeOf(context).width > 900
+                        ? 3
+                        : MediaQuery.sizeOf(context).width > 500
+                        ? 2
+                        : 1,
                   childAspectRatio: 5,
                   mainAxisSpacing: 10,
                   crossAxisSpacing: 10,

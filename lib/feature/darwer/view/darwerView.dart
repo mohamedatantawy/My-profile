@@ -42,7 +42,9 @@ class Darwerview extends StatelessWidget {
               ? MediaQuery.sizeOf(context).width * 0.3
               : wid > 800
               ? MediaQuery.sizeOf(context).width * 0.4
-              : MediaQuery.sizeOf(context).width * 0.5,
+              : wid > 800
+              ? MediaQuery.sizeOf(context).width * 0.5
+              : MediaQuery.sizeOf(context).width * 0.6,
       child: ListView(
         children: [
           SizedBox(height: 15),
@@ -131,14 +133,16 @@ class Darwerview extends StatelessWidget {
                 name: "https://www.linkedin.com/in/mohamed-tantawy-19a95b2a4/",
                 icon: 2,
               ),
+
               //https://www.instagram.com/mohamedtantawy77/profilecard/?igsh=OGU3dnZoOHgzeXZj
-              
-               launchdd(
-                name: "https://www.facebook.com/profile.php?id=100026634231528&mibextid=ZbWKwL",
+              launchdd(
+                name:
+                    "https://www.facebook.com/profile.php?id=100026634231528&mibextid=ZbWKwL",
                 icon: 3,
               ),
-                launchdd(
-                name: "https://www.instagram.com/mohamedtantawy77/profilecard/?igsh=OGU3dnZoOHgzeXZj",
+              launchdd(
+                name:
+                    "https://www.instagram.com/mohamedtantawy77/profilecard/?igsh=OGU3dnZoOHgzeXZj",
                 icon: 4,
               ),
             ],

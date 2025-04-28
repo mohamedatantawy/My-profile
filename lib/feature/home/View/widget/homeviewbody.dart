@@ -37,7 +37,7 @@ class _HomeviewbodyState extends State<Homeviewbody>
   @override
   Widget build(BuildContext context) {
     return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 60),
+      padding: const EdgeInsets.symmetric(horizontal: 40, vertical: 90),
       child: Row(
         mainAxisAlignment: MainAxisAlignment.spaceAround,
         children: [
@@ -50,7 +50,7 @@ class _HomeviewbodyState extends State<Homeviewbody>
                 SizedBox(height: 80),
 
                 Text('Hello!', style: Styles.font28),
-                SizedBox(height: 10),
+                SizedBox(height: 15),
                 ShaderMask(
                   shaderCallback: (bounds) {
                     return LinearGradient(
@@ -61,6 +61,7 @@ class _HomeviewbodyState extends State<Homeviewbody>
                   },
                   child: Text('Mohamed Tantawy ', style: Styles.font35),
                 ),
+                SizedBox(height: 10),
                 Row(
                   children: [
                     AnimatedTextKit(
@@ -87,15 +88,27 @@ class _HomeviewbodyState extends State<Homeviewbody>
                     ),
                   ],
                 ),
+                SizedBox(height: 15),
+                Text(
+                  'I can build perfect Application from Zero to Deployment ',
+                  style: Styles.font16.copyWith(color: Colors.blueGrey),
+                ),
+                Text(
+                  'for Android and Web and IOS',
+                  style: Styles.font16.copyWith(color: Colors.blueGrey),
+                ),
+                SizedBox(height: 15),
                 GestureDetector(
-                  onTap: () async{
-                      Uri uri = Uri.parse("https://drive.google.com/file/d/12naoOy9kZP9Wdu-CTStnVHK3qh_OGkBr/view");
-        if (await canLaunchUrl(uri)) {
-          await launchUrl(uri);
-          //  throw Exception('Could not launch $uri');
-        } else {
-          print('error');
-        }
+                  onTap: () async {
+                    Uri uri = Uri.parse(
+                      "https://drive.google.com/file/d/12naoOy9kZP9Wdu-CTStnVHK3qh_OGkBr/view",
+                    );
+                    if (await canLaunchUrl(uri)) {
+                      await launchUrl(uri);
+                      //  throw Exception('Could not launch $uri');
+                    } else {
+                      print('error');
+                    }
                   },
                   child: Container(
                     margin: EdgeInsets.all(12),
@@ -117,31 +130,15 @@ class _HomeviewbodyState extends State<Homeviewbody>
           ),
           Flexible(
             flex: 3,
-            child: MouseRegion(
-              // onEnter: (event) {
-              //   setState(() {
-              //     isactive = true;
-              //   });
-              // },
-              // onExit: (event) {
-              //   setState(() {
-              //     isactive = false;
-              //   });
-              // },
-              child: Container(
-                height: 500,
-                width: 500,
-                child: AnimatedBuilder(
-                  animation: _animation,
-                  builder: (context, child) {
-                    return Transform.translate(
-                      offset: Offset(0, _animation.value), // Move up and down
-                      child: child,
-                    );
-                  },
-                  child: Image.asset('asset/images/1697273887022.png'),
-                ),
-              ),
+            child: AnimatedBuilder(
+              animation: _animation,
+              builder: (context, child) {
+                return Transform.translate(
+                  offset: Offset(0, _animation.value), // Move up and down
+                  child: child,
+                );
+              },
+              child: Image.asset('asset/images/1697273887022.png'),
             ),
           ),
         ],
